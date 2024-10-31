@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  balance_before: 9.99
+  balance_after: 9.99
+  txID: MyString
+  user: one
+  created_at: 2024-10-31 18:24:36
+
+two:
+  balance_before: 9.99
+  balance_after: 9.99
+  txID: MyString
+  user: two
+  created_at: 2024-10-31 18:24:36

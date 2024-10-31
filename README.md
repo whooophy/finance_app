@@ -22,3 +22,8 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+HOW TO SETUP:
+- change database in configuration
+- run migration rails db:create
+- run seed rails db:seed
