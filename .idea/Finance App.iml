@@ -42,10 +42,13 @@
     <orderEntry type="library" scope="PROVIDED" name="bootsnap (v1.18.4, ruby-3.0.2-p107 (3)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.3.0, ruby-3.0.2-p107 (3)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v2.5.22, ruby-3.0.2-p107 (3)) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="chronic (v0.10.2, ruby-3.0.2-p107 (3)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="concurrent-ruby (v1.3.4, ruby-3.0.2-p107 (3)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="crass (v1.0.6, ruby-3.0.2-p107 (3)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="date (v3.3.4, ruby-3.0.2-p107 (3)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="debug (v1.9.2, ruby-3.0.2-p107 (3)) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dotenv (v3.1.4, ruby-3.0.2-p107 (3)) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dotenv-rails (v3.1.4, ruby-3.0.2-p107 (3)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubi (v1.13.0, ruby-3.0.2-p107 (3)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="globalid (v1.2.1, ruby-3.0.2-p107 (3)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v1.14.6, ruby-3.0.2-p107 (3)) [gem]" level="application" />
@@ -83,6 +86,7 @@
     <orderEntry type="library" scope="PROVIDED" name="tzinfo (v2.0.6, ruby-3.0.2-p107 (3)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="websocket-driver (v0.7.6, ruby-3.0.2-p107 (3)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="websocket-extensions (v0.1.5, ruby-3.0.2-p107 (3)) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="whenever (v1.0.0, ruby-3.0.2-p107 (3)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="zeitwerk (v2.6.18, ruby-3.0.2-p107 (3)) [gem]" level="application" />
   </component>
   <component name="RModuleSettingsStorage">

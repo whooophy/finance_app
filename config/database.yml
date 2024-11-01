@@ -23,10 +23,10 @@ default: &default
 
 development:
   <<: *default
-  database: Finance_App_development
-  username: postgres
-  password: root
-  host: localhost
+  database: <%= ENV['DEV_DATABASE'] || 'Finance_App_development' %>
+  username: <%= ENV['DEV_DB_USERNAME'] || 'postgres' %>
+  password: <%= ENV['DEV_DB_PASSWORD'] || 'root' %>
+  host: <%= ENV['DEV_DB_HOST'] || 'localhost' %>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -60,10 +60,10 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: Finance_App_test
-  username: postgres
-  password: root
-  host: localhost
+  database: <%= ENV['TEST_DATABASE'] || 'Finance_App_test' %>
+  username: <%= ENV['TEST_DB_USERNAME'] || 'postgres' %>
+  password: <%= ENV['TEST_DB_PASSWORD'] || 'root' %>
+  host: <%= ENV['TEST_DB_HOST'] || 'localhost' %>
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -87,8 +87,8 @@ test:
 #
 production:
   <<: *default
-  database: Finance_App_production
-  username: postgres
-  password: root
-  host: localhost
+  database: <%= ENV['PROD_DATABASE'] || 'Finance_App_production' %>
+  username: <%= ENV['PROD_DB_USERNAME'] || 'postgres' %>
+  password: <%= ENV['PROD_DB_PASSWORD'] %>
+  host: <%= ENV['PROD_DB_HOST'] || 'localhost' %>
 

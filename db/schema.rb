@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_10_31_122846) do
+ActiveRecord::Schema[7.0].define(version: 2024_11_01_002001) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -26,6 +26,18 @@ ActiveRecord::Schema[7.0].define(version: 2024_10_31_122846) do
     t.decimal "total_balance", precision: 10, scale: 2
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "user_assets", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "stock_id", null: false
+    t.decimal "buy_price"
+    t.integer "volume"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "status", default: "pending"
+    t.index ["stock_id"], name: "index_user_assets_on_stock_id"
+    t.index ["user_id"], name: "index_user_assets_on_user_id"
   end
 
   create_table "user_histories", force: :cascade do |t|
@@ -48,6 +60,8 @@ ActiveRecord::Schema[7.0].define(version: 2024_10_31_122846) do
     t.index ["team_id"], name: "index_users_on_team_id"
   end
 
+  add_foreign_key "user_assets", "stocks"
+  add_foreign_key "user_assets", "users"
   add_foreign_key "user_histories", "users"
   add_foreign_key "users", "teams"
 end
