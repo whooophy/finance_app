@@ -28,16 +28,22 @@ class UsersController < ApplicationController
   end
 
   def detail
-    user = User.includes(:user_histories).find_by(username: params[:username])
+    user = User.includes(:user_histories, user_assets: :stock).find_by(username: params[:username])
 
     if user.nil?
       render json: { error: 'User not found' }, status: :not_found
       return
     end
 
+    total_active_balance = user.user_assets
+                               .where(status: 'buy')
+                               .includes(:stock)
+                               .sum('volume * stocks.last_trade_price')
+
     render json: {
       username: user.username,
       total_balance: user.balance,
+      total_active_balance: total_active_balance,
       user_histories: user.user_histories.map { |history|
         {
           txID: history.txID,
@@ -46,9 +52,18 @@ class UsersController < ApplicationController
           type: history.type_of,
           created_at: history.created_at
         }
+      },
+      user_assets: user.user_assets.map { |asset|
+        {
+          symbol: asset.stock.symbol,
+          volume: asset.volume,
+          buy_price: asset.buy_price,
+          status: asset.status
+        }
       }
     }, status: :ok
   end
+
 
   private
 
