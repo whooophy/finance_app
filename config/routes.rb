@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  # Sessions
+  post 'sessions', to: 'sessions#create'
+  delete 'sessions', to: 'sessions#destroy'
+
   post 'topups', to: 'topups#create'
   post 'transfer', to: 'transfers#create'
 

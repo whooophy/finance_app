@@ -1,0 +1,1918 @@
+{
+	"info": {
+		"_postman_id": "8ed9d73d-0199-4ad8-9c1a-cb7672b37d17",
+		"name": "Finance APP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19615102"
+	},
+	"item": [
+		{
+			"name": "Session",
+			"item": [
+				{
+					"name": "Create session",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const responseJson = pm.response.json();",
+									"pm.environment.set(\"api_key\", responseJson.api_key);",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"superadmin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/sessions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"sessions"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "user session",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"whoophy\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/sessions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"sessions"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "_session_id=73XUGQCo6CiZIdVe09vyqoPGc3HpNd3VqHdupy20XdM5J85jEJzJM4dgmFM6LESRl37L7s0E%2Ff%2BNGkc0oI6t0lFPLcDqoEKwFJ5Y1vLKBXwgk0aK1BFr%2Fo3dDraVLhjJLlWYq3%2FLVh82cSG5u31gtno%2FTf7ti3yEOo1ysfqe2vmNpWI%2FfDdr1hwCShnDtss0GV2Zv9np5rrGmxke7168zaOVMLeadCDBDT7zXk2zSO86cORwJ3Q%2BHTxhkVzYzSXo5YaXE0eHoUzytvk1CXFzt8uto7%2FMJ52TzOmmq95vfsCws8ND8MEOA8TWeG7VsDHKLgs1n%2BpI%2BtZP6eXuztITUKZ3gQ%3D%3D--e0MYs8pdEa08s8XH--UwDCR914JcdmQOV6O%2BOLgA%3D%3D; path=/; HttpOnly; SameSite=Lax"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c6a1d9d44169a0e1513d1db72be892a6\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "21ee301c-be94-4f16-94ac-a7215d181cc4"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.021354"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "start_processing.action_controller;dur=0.07, sql.active_record;dur=3.26, instantiation.active_record;dur=5.54, process_action.action_controller;dur=19.65"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Session created\",\n    \"api_key\": \"a83cd288dfe278dffa648843803a6df6\"\n}"
+						},
+						{
+							"name": "super admin session",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"superadmin\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/sessions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"sessions"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "_session_id=vnQ4xQYgPKSlDo3pxAdoFEjIFGHE4NgVo%2FNxXxQbD1okJCXyQo%2FCFl%2FrHuh2IocVJbkB6lHL9g%2BjDF%2B3xXNFEmyg3%2FIOGOMJX34ByzJNO8IVNkMG4a2TePqHU44OYIoSVOlOHiiAPhorOXaJkpBfFZFRd9aVNoqJ%2BqdHGef0EejAHE08SXdTZ0lPY356obOStez45yB%2Bs3bQMvpWoWNDZS0UwjWw6ynJm3uVfJ44B27NYJ9k52eycZNIjmRGJ0itNt87g%2BLrwy3c7ZOMEVejcqmOqlHqxAvaWZM2yWLCHa8GS8YECZ%2FTrUI3q0ExMImyaOGS--%2Fn9JKTQv3bO6YAvI--Ghjskeur93PlWT%2BPl7%2BJAQ%3D%3D; path=/; HttpOnly; SameSite=Lax"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8dea900ac4f78b28ad7bc372b18a3012\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "702b26ce-ef55-4c57-8248-b043430cd20b"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.002884"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "start_processing.action_controller;dur=0.12, process_action.action_controller;dur=0.69"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Superadmin session created\",\n    \"api_key\": \"4f893582494eaa7c2ba152729b55b5a3\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete session",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/sessions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"sessions"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete all session",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/sessions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"sessions"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "_session_id=7ZELgI7xRCfvCIs2PEq1T%2FWMy57AFM2faZGxMnrn5vb0aQxMLZ4kyM0kVOxTqGBYHfJFAjUNCi4xOm7WP2IVqg3ANIImcjw65am5j66Ttx0FQ4khwDQEZBzB7WzeOo1Mnc76N8QPyZoSsfBo4BkMzOPtvlcmAjve72IKZYTZmqStb0A%3D--IAuXWusgY13yF6Wf--FXZ62xEmanW73OdBBoKd5A%3D%3D; path=/; HttpOnly; SameSite=Lax"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"9f5de7986c98a57b932a9ed7fa39f67c\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "ea359e5d-fbf9-45e1-bbf7-16a70a6bc6cd"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.002729"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "start_processing.action_controller;dur=0.07, process_action.action_controller;dur=0.61"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Session destroyed\"\n}"
+						},
+						{
+							"name": "Delete spesific session",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"key\": \"4f893582494eaa7c2ba152729b55b5a3\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/sessions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"sessions"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "_session_id=JcGRUsSpVYS4Phvrc31dZkAr4Dt4bRN2ObeAQvvItwusGPvBFiS5Hf8RNZDYR%2BpaqvwAkCpGmKbJYgUt5ohoVMmQ8wYXKXm1otkOAXJWKMf4xHLh6DT%2F7GcIYlYuzuaIbfe3IH04aIGW11IiQEdMvL6JJr78M6k7jItMYwseuEd%2BvkU%3D--I5%2FetDHn6qMelK%2BP--ys9468TaSblmzRAZV46v7g%3D%3D; path=/; HttpOnly; SameSite=Lax"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f61aba121b6cbaa542d23177bf6ccaed\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "18ed1a60-ae74-4b5b-b835-188b8a907c75"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.002163"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "start_processing.action_controller;dur=0.08, process_action.action_controller;dur=0.46"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Session with key 4f893582494eaa7c2ba152729b55b5a3 destroyed\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "User Detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/users/whoophy?x-api-key={{api_key}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"whoophy"
+							],
+							"query": [
+								{
+									"key": "x-api-key",
+									"value": "{{api_key}}"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "example response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/users/whoophy?x-api-key={{api_key}}",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users",
+										"whoophy"
+									],
+									"query": [
+										{
+											"key": "x-api-key",
+											"value": "{{api_key}}"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "_session_id=8Sjz9lMFHsLE9JdlD2E57UktVbCMiGu%2Fj5nY%2FhDTRCu1bdvT%2FXg7Hn3D4p%2FXB2fDNdD8NsRr%2B%2BzoxfPhFj6RkxlZN5e0xcVCVskrDlWaplrP8iIEX9T%2F0SfcTWLSLGinapXzSGLuu1bDQOoj5lPYqdzRVFFJW%2FtD%2FE5pmRPnl5NeO7SFyLj0uwpaIg%2FWwnvaB44xJU%2BkMg08OkVx3XwWZFarlTn7RjofRm7GaQvw932bgHrEjhuU0rs53a6iy06E4O6OMXhpzm58t%2BvJ%2F5XQoiLmhG3bP9mdB7zV3PMZlLZGGIjB%2BuScGdEQ%2BwD5DBFNVlKa--9Wp4UobK6AdGC%2F5k--InvSbT0ThSX2jc3Uj9LhDw%3D%3D; path=/; HttpOnly; SameSite=Lax"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1f904fd1ae183d0db26003d0c3860dba\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "93cd18b6-342d-4c57-8760-1f95f93ea7e9"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.086672"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "start_processing.action_controller;dur=0.10, sql.active_record;dur=14.75, instantiation.active_record;dur=33.01, process_action.action_controller;dur=79.80"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"username\": \"whoophy\",\n    \"total_balance\": \"83.76\",\n    \"total_active_balance\": \"16.24\",\n    \"user_histories\": [\n        {\n            \"txID\": \"TXTOPUP1730377828\",\n            \"balance_before\": \"0.0\",\n            \"balance_after\": \"100.0\",\n            \"type\": \"debit\",\n            \"created_at\": \"2024-10-31T12:30:28.424Z\"\n        },\n        {\n            \"txID\": \"TXTOPUP1730379445\",\n            \"balance_before\": \"100.0\",\n            \"balance_after\": \"300.0\",\n            \"type\": \"debit\",\n            \"created_at\": \"2024-10-31T12:57:25.748Z\"\n        },\n        {\n            \"txID\": \"TXTransfer1730381198\",\n            \"balance_before\": \"300.0\",\n            \"balance_after\": \"200.0\",\n            \"type\": \"credit\",\n            \"created_at\": \"2024-10-31T13:26:38.747Z\"\n        },\n        {\n            \"txID\": \"TXTransfer1730381331\",\n            \"balance_before\": \"200.0\",\n            \"balance_after\": \"100.0\",\n            \"type\": \"credit\",\n            \"created_at\": \"2024-10-31T13:28:51.378Z\"\n        },\n        {\n            \"txID\": \"TXTransfer1730381475\",\n            \"balance_before\": \"100.0\",\n            \"balance_after\": \"0.0\",\n            \"type\": \"credit\",\n            \"created_at\": \"2024-10-31T13:31:15.445Z\"\n        },\n        {\n            \"txID\": \"TXReceive1730381897\",\n            \"balance_before\": \"0.0\",\n            \"balance_after\": \"100.0\",\n            \"type\": \"debit\",\n            \"created_at\": \"2024-10-31T13:38:17.617Z\"\n        },\n        {\n            \"txID\": \"TXReceive1730381935\",\n            \"balance_before\": \"100.0\",\n            \"balance_after\": \"200.0\",\n            \"type\": \"debit\",\n            \"created_at\": \"2024-10-31T13:38:55.456Z\"\n        },\n        {\n            \"txID\": \"TXTransfer1730382164\",\n            \"balance_before\": \"200.0\",\n            \"balance_after\": \"100.0\",\n            \"type\": \"credit\",\n            \"created_at\": \"2024-10-31T13:42:44.895Z\"\n        }\n    ],\n    \"user_assets\": [\n        {\n            \"symbol\": \"VODAIDEA.NS\",\n            \"volume\": 2,\n            \"buy_price\": \"8.12\",\n            \"status\": \"buy\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"dont.reuse\",\n    \"team_id\":1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users?x-api-key={{api_key}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "x-api-key",
+									"value": "{{api_key}}"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\":\"dont.reuse\",\n    \"team_id\":1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/users?x-api-key={{api_key}}",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users"
+									],
+									"query": [
+										{
+											"key": "x-api-key",
+											"value": "{{api_key}}"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "_session_id=UYtzKKxsxAxy80CQzlHrm%2FkUrfMxeziHG4br%2FJKZzO6Lwx1f3b3p0GWCs9XY71RHESsMQn73gQLbvL5E5H8GA3xOGuZMq3EJWkJxFhO%2FYnCJ0VHyp0X0W1c7Zsmg1WMg2n%2FAtev%2BwINvbMejVEYY81X2ks3AIAexbeP0KV%2FL28Eep8uf3PAmzhbcf1P%2B6IaY440LpB99R39U735swyODkiZdwExe5Sn70EM%2BzX81jm1x4OPxleKjnFRmoSBhH%2FLh%2Bbetws1gmZFWLS%2BWHV6%2BWM801mIVJwaiPm0FVdMgPWdUqXAYJdqQ9WpRoFrc5cx4avlC--uIIaUJrYRf7UbDyS--a8eeJac6lWOqzuA7u7ct2Q%3D%3D; path=/; HttpOnly; SameSite=Lax"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2cf62dd8f2c9a4b9d88b16781dfb336d\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "76b25713-f952-4a5d-b6f6-fb9c520c82a0"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.047587"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "start_processing.action_controller;dur=0.11, sql.active_record;dur=12.43, instantiation.active_record;dur=4.16, process_action.action_controller;dur=45.41"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User created successfully\",\n    \"user\": {\n        \"id\": 4,\n        \"username\": \"dont.reuse\",\n        \"team_id\": 1,\n        \"balance\": null,\n        \"created_at\": \"2024-11-01T12:58:52.049Z\",\n        \"updated_at\": \"2024-11-01T12:58:52.049Z\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "teams",
+			"item": [
+				{
+					"name": "list teams",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/teams?x-api-key={{api_key}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"teams"
+							],
+							"query": [
+								{
+									"key": "x-api-key",
+									"value": "{{api_key}}"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "list team response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/teams?x-api-key={{api_key}}",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"teams"
+									],
+									"query": [
+										{
+											"key": "x-api-key",
+											"value": "{{api_key}}"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "_session_id=yfUM2JMVSKIdl4sg2IPFvqyHManknPZyy4qtcrvDfQRc2ELDQQScTAYp2VNu%2B6Gk1vPrAI0n1WKKFYM%2FVoHegMX289RVm4PqM3UBP%2F07uGy21V0MnNXtC06vlhCKriJ1Xuq6COB4kUnACort8Bb3yTVROD%2BZeisvSWZCzHmXKic5%2BUsQgjNAs%2FpgMG%2B8K7NSNpYTj5GPS0EhNwxiIRhl6XRxXpStvrhNuZqudS6AF5%2FS4%2BgQn91ZhKDMlODepulHCo7sEX3Kb9Al1gTfpot484QxaK4ATALNxGepJMOfAw2%2BeA%2BSNWa42VVBbM0tox92Om59--09zYCIPkd0om5FMF--rSRKPI4SDOESOXodcD%2Bxcw%3D%3D; path=/; HttpOnly; SameSite=Lax"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3fa11e2c3253f3669b4766e3c09993e4\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "3fcbd624-a743-4a8b-bcec-526583e110dd"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.007683"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "start_processing.action_controller;dur=0.08, sql.active_record;dur=0.91, instantiation.active_record;dur=0.06, process_action.action_controller;dur=2.47"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Team Alpha\",\n        \"total_balance\": \"1310.0\"\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Team Beta\",\n        \"total_balance\": \"1600.0\"\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Team Gamma\",\n        \"total_balance\": \"2000.0\"\n    },\n    {\n        \"id\": 4,\n        \"name\": \"Team Delta\",\n        \"total_balance\": \"2500.0\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "detail teams",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/teams?x-api-key={{api_key}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"teams"
+							],
+							"query": [
+								{
+									"key": "x-api-key",
+									"value": "{{api_key}}"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Detail teams response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/teams/1?x-api-key={{api_key}}",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"teams",
+										"1"
+									],
+									"query": [
+										{
+											"key": "x-api-key",
+											"value": "{{api_key}}"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "_session_id=TZNp8QPIbJ8ezL2yFlSgauQlEQOhk2J2NoHPmoTVAU%2BKqBvHo84uL9zbnj%2Bbz%2B%2F6K8Iz93c1GUxcHdSezB9EtkGC7BzVjPxkcjNwTBrOa1N8hUkzs1x%2BvqHw3r%2BPhlLnP21PJUEyt9G2j6aNxfzqNSP43hdBgAavKq2uYzssfCHPiWfApEgnA2PMhFGbehH2rDImbknjNtPsTJ8%2Fvi%2F9GUBOGxyNv0Lko%2BNBS7eHJdBG4jflaLBe8pebL7rF0J4UCNOgotjLOFoe3QU6wPxJbYheS1WoJgH2zH8A3pBVgWkQEzbb73mGLK10WearInjcAqvp--JbA%2FiQ9xE5dg6a1i--hpPZTsYvVtNut5lp9n2Szw%3D%3D; path=/; HttpOnly; SameSite=Lax"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a8230f71f8be7612b187a2d586777aa6\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "6c9669c7-05d5-4517-8434-a2fc6fab152f"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.005470"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "start_processing.action_controller;dur=0.07, sql.active_record;dur=1.19, instantiation.active_record;dur=0.15, process_action.action_controller;dur=3.74"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"team_name\": \"Team Alpha\",\n    \"total_balance\": \"1310.0\",\n    \"users\": [\n        {\n            \"username\": \"whoophy\",\n            \"balance\": \"93.76\"\n        },\n        {\n            \"username\": \"dont.reuse\",\n            \"balance\": \"89.9\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "topup user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"dont.reuse\",\n    \"total_balance\":100\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/topups?x-api-key={{api_key}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"topups"
+					],
+					"query": [
+						{
+							"key": "x-api-key",
+							"value": "{{api_key}}"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create User",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"dont.reuse\",\n    \"team_id\":1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users?x-api-key={{api_key}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "x-api-key",
+									"value": "{{api_key}}"
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "_session_id=UYtzKKxsxAxy80CQzlHrm%2FkUrfMxeziHG4br%2FJKZzO6Lwx1f3b3p0GWCs9XY71RHESsMQn73gQLbvL5E5H8GA3xOGuZMq3EJWkJxFhO%2FYnCJ0VHyp0X0W1c7Zsmg1WMg2n%2FAtev%2BwINvbMejVEYY81X2ks3AIAexbeP0KV%2FL28Eep8uf3PAmzhbcf1P%2B6IaY440LpB99R39U735swyODkiZdwExe5Sn70EM%2BzX81jm1x4OPxleKjnFRmoSBhH%2FLh%2Bbetws1gmZFWLS%2BWHV6%2BWM801mIVJwaiPm0FVdMgPWdUqXAYJdqQ9WpRoFrc5cx4avlC--uIIaUJrYRf7UbDyS--a8eeJac6lWOqzuA7u7ct2Q%3D%3D; path=/; HttpOnly; SameSite=Lax"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2cf62dd8f2c9a4b9d88b16781dfb336d\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "76b25713-f952-4a5d-b6f6-fb9c520c82a0"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.047587"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "start_processing.action_controller;dur=0.11, sql.active_record;dur=12.43, instantiation.active_record;dur=4.16, process_action.action_controller;dur=45.41"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"User created successfully\",\n    \"user\": {\n        \"id\": 4,\n        \"username\": \"dont.reuse\",\n        \"team_id\": 1,\n        \"balance\": null,\n        \"created_at\": \"2024-11-01T12:58:52.049Z\",\n        \"updated_at\": \"2024-11-01T12:58:52.049Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "transfer user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"dont.reuse\",\n    \"total_balance\":100\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/topups?x-api-key={{api_key}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"topups"
+					],
+					"query": [
+						{
+							"key": "x-api-key",
+							"value": "{{api_key}}"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "transfer user",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"source\":\"dont.reuse\",\n    \"destination\":\"whoophy\",\n    \"balance\":10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/transfer?x-api-key={{api_key}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"transfer"
+							],
+							"query": [
+								{
+									"key": "x-api-key",
+									"value": "{{api_key}}"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "_session_id=6tUKqyudL1xqhRgalzect2jIQ8td6m3gyy7UCr9lBPTm5c70ovUXlW5JHK46Cpv8YuH4SsmPgTIXEKoRGWQlmJEMv0ak%2BELomGHNmzsstQsATYaai3%2Fj57V82rNK9XLO9lelNchZ6Qj9RmCwSt4Wl5mcPAJ73j9aLWe5jchS5E8FjTTo7miqX7S7xsQLzWTVBy0uQQtmJ%2B7h8f85P8Qy86h%2Fw68p25rTL9B5eE3OAEverHAF4nBtMI8ppQ%2BDeya4X3RTTkgdvHs9Q3U%2BWmGcORdnmUOsprwMKrMHfYepaae3sIsbpI5juw1qmxYKoXN6oLUD--2MkeAeaZJGes3zVQ--1R1IzIy%2FABKnf23oJX3jzw%3D%3D; path=/; HttpOnly; SameSite=Lax"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a73a11f2dc04c5b24513c9dbd83efb0b\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "9e51a7cd-d7e4-4696-b1aa-daf5284c4e9d"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.022988"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "start_processing.action_controller;dur=0.09, sql.active_record;dur=9.49, instantiation.active_record;dur=0.14, process_action.action_controller;dur=17.22"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Transfer successful\",\n    \"transfer_id\": \"TXTransfer1730466536\",\n    \"receive_id\": \"TXReceive1730466536\"\n}"
+				},
+				{
+					"name": "error destination not found",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"source\":\"dont.reuse\",\n    \"destination\":\"aeezakmi\",\n    \"balance\":10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/transfer?x-api-key={{api_key}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"transfer"
+							],
+							"query": [
+								{
+									"key": "x-api-key",
+									"value": "{{api_key}}"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "_session_id=Jc%2FdEy%2Bl1gmLUGYvPZT0zO%2FWHTt41svqDUhm6UiJGn4qS%2F1Ai3LRV5XwQqQDZNvYtcY%2BvTWn2u2CrIalEQ5NnqDj51njOYkHvsRBumjQdchLYgVblnO3ey%2BhOCvug7%2BVU46bRII7iwP0mQJ917vhpFPPhAIdAq5fkPb6LKFfNRSMDGXeL%2Fwa%2F7rAFymlBQWJGTXLZT%2FKxzZGdctm9Q5L%2Bt%2Fg5Iupfo4ACXS%2BcsLLb26dEZ0ONrXuBC5zNMe3XZC48pjJiELbOKvO4cjGvuX79y9dkpLwAvaH3cwuyW25AtJ%2FGJeSQEKr8%2FFgb7hAT%2B83ltD%2B--dLM47hOFs64mon8V--VKNyeNlx38c8vR3lYd7mAA%3D%3D; path=/; HttpOnly; SameSite=Lax"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "a4a690dd-ffb0-47fe-9425-4f0924f03558"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.005578"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "start_processing.action_controller;dur=0.11, sql.active_record;dur=1.30, instantiation.active_record;dur=0.05, process_action.action_controller;dur=3.18"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"Source or destination user not found\"\n}"
+				}
+			]
+		},
+		{
+			"name": "buy asset",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"dont.reuse\",\n    \"total_balance\":100\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/topups?x-api-key={{api_key}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"topups"
+					],
+					"query": [
+						{
+							"key": "x-api-key",
+							"value": "{{api_key}}"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "insufficient balance",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"dont.reuse\",\n    \"symbol\":\"IBLFINA.SMN.NS\",\n    \"volume\":3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/buy_asset?x-api-key={{api_key}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"buy_asset"
+							],
+							"query": [
+								{
+									"key": "x-api-key",
+									"value": "{{api_key}}"
+								}
+							]
+						}
+					},
+					"status": "Unprocessable Entity",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "_session_id=c4bmIGP4EG28CZTqIQdZAnSu79X57Mo7krQKDnAmr6CEFG9GAhS4q5FAKG5RcajqbR1f4YK9opIljNXp8qyQ2UL%2Fwtw%2FGZM1MHclKia56a33%2Fr4UBxxrTVNrblEzQ3X8oJzs0xlupmLhKySgK1OkjDA7oxLN9VkV9xJpsh%2Buzz24X0GErh5ewZ%2FSe6HBVMM3Wnfpg7YI05tId9J2U1ZltInLF%2BwVe1Mj64x3%2FjakKXtbMVxbXyD388QEjIt7gwfI9hVZp773fZVdhrvNE3uAuTsdiTerwE35tuJ4pUtOGqZOvwjLIOM4YmGdaKBWjO80894I--JgtNovndOkU18VT6--iVC8H7PbiUw3Kt4ERAE38w%3D%3D; path=/; HttpOnly; SameSite=Lax"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "125de865-3a08-43f9-bd4a-702f058ebbf8"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "6.485537"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "sql.active_record;dur=4.56, start_processing.action_controller;dur=0.21, instantiation.active_record;dur=2.31, process_action.action_controller;dur=6403.83"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"Insufficient balance\"\n}"
+				},
+				{
+					"name": "success buy asset",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"dont.reuse\",\n    \"symbol\":\"IBLFINA.SMN.NS\",\n    \"volume\":1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/buy_asset?x-api-key={{api_key}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"buy_asset"
+							],
+							"query": [
+								{
+									"key": "x-api-key",
+									"value": "{{api_key}}"
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "_session_id=LqqYP9w8%2B75wuASgH7tMmg7vmK88oyuSK%2BXiFEqomkpBq1XeUu34U4tIURhvA80wfrz3zc55WnG%2FhLA9Jwkr1naaL2gppLTIq3N7JURmseHL%2F6QvrDu0YgmcxW560BWLV%2BWiuii%2Fes2Ou8hFEYHFC%2F7pfXKC%2BPW0jR4a50oFnyuG6S5K9ZBntvEvXroHU5ES6iLtLV%2FUXD5ruZwJpfjIM4qmMHPh5GtexG4vV4h0nvSE5RHIk31fIyr%2FHE8DaCjqXUDWGMCCjUZ2uhSgMRv0P%2BYP1CUpXQyG9OzdgUHZxD5w91HwuAxqdAnmycRQeSrqapvF--cc%2BGKe55wsUEiIgi--PYAjMYPXH9NEUROkt2pqMQ%3D%3D; path=/; HttpOnly; SameSite=Lax"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"80973b3fd5069472a4bc0be002a0aea7\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "3531b593-c737-4889-8636-2d8406ad6baa"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "3.851705"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "start_processing.action_controller;dur=0.10, sql.active_record;dur=11.71, instantiation.active_record;dur=0.08, process_action.action_controller;dur=3849.57"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"asset\": {\n        \"id\": 2,\n        \"symbol\": \"IBLFINA.SMN.NS\",\n        \"last_trade_price\": \"69.0\",\n        \"volume\": 1,\n        \"status\": \"pending\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "confirm_buy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"dont.reuse\",\n    \"total_balance\":100\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/topups?x-api-key={{api_key}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"topups"
+					],
+					"query": [
+						{
+							"key": "x-api-key",
+							"value": "{{api_key}}"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "response success confirm buy",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"dont.reuse\",\n    \"asset_id\":2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/confirm_buy?x-api-key={{api_key}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"confirm_buy"
+							],
+							"query": [
+								{
+									"key": "x-api-key",
+									"value": "{{api_key}}"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "_session_id=hmu4mzSnPoXnEFJ%2BDu2UgQd2GvhOdpCEpnNWPqpUDDn7Vp9UQAkyRPfAQ4W8uWhk5nXhPFkCYz%2F2I%2FxmEBQiA04MopJ7z1MpotWZ4Uu4LSVqSLbkpN7ReLNuYBYxZBnV%2F4hI3VVbysnWjTzcjb8DTNKKIlXvHMqTcZsdr2MNpQ9ac3I1s9BG0FTrTB5Lx7gsO0nF8RV8v6fM26GCexNQZDH8IpxC9Y9FdTkt0Sal%2BLg%2F48%2BUSBRlAYTKlo3FUuNxINAkNjxHcrxq6ABQTFXfCwi5ut3HZWGd7hjvrWiTGbtC62mm1LA9qrzNYmrfLje2u9VP--hqr4j8GbKlnKEuAe--UkTvKasAzadstz9NgOjI5Q%3D%3D; path=/; HttpOnly; SameSite=Lax"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c398c07d55af1db02c83b5eff6e3a0a9\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "b27d6481-8661-432f-a023-09f8d2da26cd"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.131590"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "sql.active_record;dur=19.78, start_processing.action_controller;dur=0.09, instantiation.active_record;dur=27.57, process_action.action_controller;dur=62.98"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"asset\": {\n        \"id\": 2,\n        \"symbol\": \"IBLFINA.SMN.NS\",\n        \"last_trade_price\": \"69.0\",\n        \"volume\": 1,\n        \"status\": \"buy\"\n    }\n}"
+				},
+				{
+					"name": "not pending status",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"dont.reuse\",\n    \"asset_id\":2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/confirm_buy?x-api-key={{api_key}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"confirm_buy"
+							],
+							"query": [
+								{
+									"key": "x-api-key",
+									"value": "{{api_key}}"
+								}
+							]
+						}
+					},
+					"status": "Unprocessable Entity",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "_session_id=8XVMGMz2GSCzpP9So%2FiT56YixRSGZ4GGStfPasmM7B3vg8O6gatKef0Az8iMLiw4ttDT9%2BN89xHvX%2BlMTz1XtOFW1IRNybVTHNoLAxzvNi1KGuKemnOXilef1jh%2Bsq%2FP5CIgibgMFxkp7eNIgNvPGvhFGaP99AdT7L%2BpRad7dOBVnoTJNNMjDy10kjcOIdUjwLCCkrGV61SdGjGhQ8lGazoKYNTdae9j0UQCbKsR5rC%2FM84QRCkF8CtVwJLUGo%2Bf5mkDuJYHYSupPrIELr8mPyly61AKVmy2c8aUUYH2OV%2F9iOb86XRpXBqcTHNdzq3QfhBA--FFCA0%2B0oDALwfMor--bMsEk5gJX44R9bsHqNVZwA%3D%3D; path=/; HttpOnly; SameSite=Lax"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "d7187f19-bc0b-4dd4-9e45-a7637aed9fef"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.004035"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "start_processing.action_controller;dur=0.07, sql.active_record;dur=0.80, instantiation.active_record;dur=0.06, process_action.action_controller;dur=2.18"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"UserAsset is not in pending status\"\n}"
+				}
+			]
+		},
+		{
+			"name": "search asset",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"dont.reuse\",\n    \"total_balance\":100\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/search_asset?q=NO&x-api-key={{api_key}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"search_asset"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "NO"
+						},
+						{
+							"key": "x-api-key",
+							"value": "{{api_key}}"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Search result",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"dont.reuse\",\n    \"total_balance\":100\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/search_asset?query=NO&x-api-key={{api_key}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"search_asset"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "NO"
+								},
+								{
+									"key": "x-api-key",
+									"value": "{{api_key}}"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "_session_id=cujByCWHxcaeT0erww8e%2BTB9J4gZo%2B2nbcry3M7t3XrDirGcySmw68pPNgiohTgTeWRPjJwwE7IvTrD9OhLerKOrwhtv7pp2DCT6q8PteVa9xPRLnaq%2B29%2FFdN89bUE49c6zG6gAAGtEGBkvxb%2FNjUI0q49zneILFr5pH2J9hR1gl1DEMpjV6Um2hgm0V9f7w5acO0tNExKGxnV2suvpe13mJMmWC93Run140%2BwKb1QZq6fuGLvT2oQOomGnMFuXHGXinB4zJvxWAfC%2FKeMyDiL4yZQTDjD15ukNwfuS81xVj5ziObIiH7nkAiWbn%2Fw2vtnh--cJ%2BS59mfeeAEbLTd--jhLEvANqkF96tTMHzIP62Q%3D%3D; path=/; HttpOnly; SameSite=Lax"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"8f51ca43fc6a321077bcb967b4b8d5ba\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "f2d4cdb4-64c8-41c8-a916-959017c568bd"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "1.464216"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "start_processing.action_controller;dur=0.11, process_action.action_controller;dur=1461.45"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"results\": [\n        {\n            \"Symbol\": \"AKZONOBE.NS\",\n            \"ISIN\": \"INE133A01011\",\n            \"Name\": \"Akzo Nobel India Ltd.\"\n        },\n        {\n            \"Symbol\": \"ASIHOTEL.NS\",\n            \"ISIN\": \"INE363A01022\",\n            \"Name\": \"Asian Hotels (North) Ltd.\"\n        },\n        {\n            \"Symbol\": \"DCMNOUV.NS\",\n            \"ISIN\": \"INE08KP01019\",\n            \"Name\": \"DCM Nouvelle Ltd.\"\n        },\n        {\n            \"Symbol\": \"DENORA.NS\",\n            \"ISIN\": \"INE244A01016\",\n            \"Name\": \"DE Nora India Ltd.\"\n        },\n        {\n            \"Symbol\": \"GRINNORT.NS\",\n            \"ISIN\": \"INE536A01023\",\n            \"Name\": \"Grindwell Norton Ltd.\"\n        },\n        {\n            \"Symbol\": \"NOCI.NS\",\n            \"ISIN\": \"INE163A01018\",\n            \"Name\": \"Nocil Ltd.\"\n        },\n        {\n            \"Symbol\": \"NOIDTOLL.NS\",\n            \"ISIN\": \"INE781B01015\",\n            \"Name\": \"Noida Toll Bridge Company Ltd.\"\n        },\n        {\n            \"Symbol\": \"NORBTEA.NS\",\n            \"ISIN\": \"INE369C01017\",\n            \"Name\": \"Norben Tea & Exports Ltd.\"\n        },\n        {\n            \"Symbol\": \"NORTEAST.NS\",\n            \"ISIN\": \"INE553C01016\",\n            \"Name\": \"North Eastern Carrying Corp Ltd.\"\n        },\n        {\n            \"Symbol\": \"NORTARC.NS\",\n            \"ISIN\": \"INE850M01015\",\n            \"Name\": \"Northern Arc Capital Ltd.\"\n        },\n        {\n            \"Symbol\": \"NOVAAGRI.NS\",\n            \"ISIN\": \"INE02H701025\",\n            \"Name\": \"Nova Agritech Ltd.\"\n        },\n        {\n            \"Symbol\": \"NOVAINDI.NS\",\n            \"ISIN\": \"INE234A01025\",\n            \"Name\": \"Novartis India Ltd.\"\n        },\n        {\n            \"Symbol\": \"NOVOINDU.NS\",\n            \"ISIN\": \"INE460B01016\",\n            \"Name\": \"Novopan Industries Ltd\"\n        },\n        {\n            \"Symbol\": \"SABEVEN.NS\",\n            \"ISIN\": \"INE860T01019\",\n            \"Name\": \"Sab Events & Governance Now Media Ltd.\"\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}

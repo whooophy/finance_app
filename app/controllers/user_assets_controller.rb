@@ -1,6 +1,6 @@
 class UserAssetsController < ApplicationController
   def buy
-    required_params = [:user_id, :symbol, :volume]
+    required_params = [:username, :symbol, :volume]
     missing_params = required_params.select { |param| params[param].blank? }
 
     unless missing_params.empty?
@@ -8,11 +8,11 @@ class UserAssetsController < ApplicationController
       return
     end
 
-    user_id = params[:user_id]
+    username = params[:username]
     asset_symbol = params[:symbol]
     volume = params[:volume].to_i
 
-    user = User.find_by(id: user_id)
+    user = User.find_by(username: username)
 
     if user.nil?
       render json: { error: "User not found" }, status: :not_found
@@ -57,7 +57,7 @@ class UserAssetsController < ApplicationController
   end
 
   def confirm_buy
-    required_params = [:user_id, :asset_id]
+    required_params = [:username, :asset_id]
     missing_params = required_params.select { |param| params[param].blank? }
 
     unless missing_params.empty?
@@ -65,10 +65,10 @@ class UserAssetsController < ApplicationController
       return
     end
 
-    user_id = params[:user_id]
+    username = params[:username]
     asset_id = params[:asset_id]
 
-    user = User.find_by(id: user_id)
+    user = User.find_by(username: username)
 
     if user.nil?
       render json: { error: "User not found" }, status: :not_found
